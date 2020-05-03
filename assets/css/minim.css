@@ -140,12 +140,12 @@ body {
 
 .post-preview {
   padding: 40px 0;
-  border-bottom: 1px solid #ededed;
+  border-bottom: 1px solid #dadada;
   position: relative;
 }
 
 .post-preview:first-child {
-  border-top: 1px solid #ededed;
+  border-top: 1px solid #dadada;
 }
 
 .post-continue {
@@ -230,7 +230,9 @@ body {
 }
 
 .copyright {
+  font-size: 12px;
   text-align: center;
+  padding: 0 20px;
 }
 
 .copyright a {
@@ -340,5 +342,28 @@ body {
 
   .nav-menu-icon.active {
     display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .featured-post-content {
+    bottom: 24px;
+  }
+
+  .featured-post-content .post-card-title {
+    font-size: 36px;
+    width: 85%;
+  }
+
+  .featured-post-content .post-tagline {
+    width: 85%;
+  }
+
+  .featured-post-content .post-card-excerpt {
+    width: 85%;
+  }
+
+  .post-tagline {
+    font-size: 12px;
   }
 }
