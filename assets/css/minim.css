@@ -9,6 +9,10 @@ body {
   color: #454545;
 }
 
+figure {
+  margin: 0;
+}
+
 .site-navigation {
   background-color: white;
   margin: 48px 0 0;
@@ -70,7 +74,7 @@ body {
 }
 
 .featured-post::after {
-  background: linear-gradient(14deg, rgba(14,14,14,1) 0%, rgba(227, 181, 54, 0.6) 100%);
+  background: linear-gradient(14deg, rgba(14,14,14,1) 0%, rgba(227, 181, 54, 0.4) 100%);
   border-radius: 8px;
   content: '';
   position: absolute;
@@ -265,7 +269,6 @@ body {
 }
 
 .post-full-image, .post-full-image img {
-  margin: 0;
   width: 100%;
 }
 
@@ -278,8 +281,203 @@ body {
   margin-top: 32px;
 }
 
-.post-content p {
+.post-content p, .post-content li {
   line-height: 1.8;
+}
+
+.post-content a {
+  color: #e3b536;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.post-content a:hover {
+  text-decoration: underline;
+}
+
+.post-content pre {
+  margin: 36px 0;
+}
+
+.post-content blockquote {
+  margin: 0;
+  padding: 8px 16px;
+  border-left: 4px solid #e3b536;
+}
+
+.kg-bookmark-card {
+  width: 100%;
+}
+
+.kg-card {
+  margin: 36px 0;
+}
+
+.post-full-content .kg-bookmark-container {
+  display: flex;
+  min-height: 148px;
+  color: #454545;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px solid #9e9e9e;
+}
+
+.kg-bookmark-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.kg-bookmark-title {
+  font-size: 18px;
+  font-weight: 700;
+  transition: color 250ms;
+}
+
+.kg-bookmark-container:hover {
+  text-decoration: none;
+}
+
+.post-full-content .kg-bookmark-container:hover .kg-bookmark-title {
+  color: #e3b536;
+}
+
+.kg-bookmark-description {
+  display: -webkit-box;
+  font-size: 14px;
+  overflow-y: hidden;
+  margin-top: 12px;
+  max-height: 48px;
+
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.kg-bookmark-thumbnail {
+  position: relative;
+  min-width: 33%;
+  max-height: 100%;
+}
+
+.kg-bookmark-thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+
+  object-fit: cover;
+}
+
+.kg-bookmark-metadata {
+  display: flex;
+  font-size: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.post-full-content .kg-bookmark-icon {
+  margin-right: 5px;
+  width: 14px;
+  height: 14px;
+}
+
+.kg-bookmark-author {
+  line-height: 1.5em;
+}
+
+.kg-bookmark-author:after {
+  content: "•";
+  margin: 0 6px;
+}
+
+.kg-bookmark-publisher {
+  overflow: hidden;
+  max-width: 240px;
+  line-height: 1.5em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kg-image {
+  width: 100%;
+}
+
+.kg-gallery-container {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  position: relative;
+  left: -5vw;
+}
+
+.kg-gallery-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.kg-gallery-image img {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.kg-gallery-row:not(:first-of-type) {
+  margin: 0.75em 0 0 0;
+}
+
+.kg-gallery-image:not(:first-of-type) {
+  margin: 0 0 0 0.75em;
+}
+
+.kg-gallery-card + .kg-image-card.kg-width-wide,
+.kg-gallery-card + .kg-gallery-card,
+.kg-image-card.kg-width-wide + .kg-gallery-card,
+.kg-image-card.kg-width-wide + .kg-image-card.kg-width-wide {
+  margin: -2.25em 0 3em;
+}
+
+.post-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 80px 0 40px 0;
+}
+
+.post-navigation a {
+  text-decoration: none;
+}
+
+.post-navigation a:hover .previous-post-title, .post-navigation a:hover .next-post-title {
+  color: #e3b536;
+}
+
+.post-navigation a:hover .post-continue {
+  color: #e3b536;
+  display: inline-block;
+}
+
+.post-navigation .next-post {
+  text-align: right;
+}
+
+.previous-post-label, .next-post-label {
+  color: #9e9e9e;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.previous-post-title, .next-post-title {
+  color: #454545;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 @media (max-width: 1400px) {
@@ -299,6 +497,14 @@ body {
 
   .site-main {
     margin: 0 8vw;
+  }
+
+  .post-full-header {
+    margin: 40px 0;
+  }
+
+  .post-full-content {
+    margin: 40px 0;
   }
 }
 
@@ -342,6 +548,16 @@ body {
 
   .nav-menu-icon.active {
     display: block;
+  }
+}
+
+@media (max-width: 800px) {
+  .post-full-header .post-full-title {
+    font-size: 36px;
+  }
+
+  .post-navigation {
+    display: none;
   }
 }
 
