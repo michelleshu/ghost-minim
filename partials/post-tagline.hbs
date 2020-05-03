@@ -1,0 +1,9 @@
+<p class="post-tagline">
+  <span class="dot-suffix">{{date published_at format="MMMM DD, YYYY"}}</span>
+  {{#if primary_tag}}
+    <span class="dot-suffix">{{reading_time}}</span>
+    <a class="primary-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
+  {{else}}
+    <span>{{reading_time}}</span>
+  {{/if}}
+</p>

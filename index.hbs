@@ -1,0 +1,34 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{!-- The main content area --}}
+{{^is "paged"}}
+  {{#get "posts" filter="featured:true" limit="1"}}
+    {{#if posts}}
+      <div class="featured-posts">
+        {{#foreach posts}}
+          <div class="featured-post" style="background-image: url('{{feature_image}}')">
+            <a href="{{url}}" title="{{title}}">
+              <div class="featured-post-tag">Featured</div>
+              <div class="featured-post-content">
+                <h2 class="post-card-title">{{title}}</h2>
+                {{> "post-tagline"}}
+                <p class="post-card-excerpt">{{excerpt}}</p>
+              </div>
+            </a>
+          </div>
+        {{/foreach}}
+      </div>
+    {{/if}}
+  {{/get}}
+{{/is}}
+
+{{!-- Latest posts --}}
+<div class="latest-posts">
+  {{#foreach posts}}
+    {{> "post-preview"}}
+  {{/foreach}}
+</div>
+
+{{pagination}}
