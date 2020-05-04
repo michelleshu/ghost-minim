@@ -480,12 +480,21 @@ figure {
   font-weight: 700;
 }
 
+.tag-title {
+  font-size: 24px;
+  color: #e3b536;
+}
+
+.tag-header, .tag-posts {
+  margin: 40px 5vw;
+}
+
 @media (max-width: 1400px) {
   .site-navigation {
     padding: 20px 15vw;
   }
 
-  .latest-posts {
+  .latest-posts, .tag-header, .tag-posts {
     margin: 40px 0;
   }
 }
