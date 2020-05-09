@@ -13,6 +13,11 @@ figure {
   margin: 0;
 }
 
+figcaption {
+  color: #9e9e9e;
+  font-style: italic;
+}
+
 .site-navigation {
   background-color: white;
   margin: 48px 0 0;
@@ -56,7 +61,7 @@ figure {
 }
 
 .site-main {
-  margin: 0 15vw;
+  margin: 0 20vw;
 }
 
 .featured-posts {
@@ -229,7 +234,7 @@ figure {
 
 .site-footer {
   font-size: 14px;
-  margin: 80px 0 20px;
+  margin: 80px 0;
   text-transform: uppercase;
 }
 
@@ -311,6 +316,7 @@ figure {
 
 .kg-card {
   margin: 36px 0;
+  text-align: center;
 }
 
 .post-full-content .kg-bookmark-container {
@@ -405,7 +411,12 @@ figure {
 }
 
 .kg-image {
-  width: 100%;
+  max-width: 100%;
+}
+
+.kg-embed-card iframe {
+  width: 57.6vw;
+  height: 32.4vw;
 }
 
 .kg-gallery-container {
@@ -505,7 +516,7 @@ figure {
   }
 
   .site-main {
-    margin: 0 8vw;
+    margin: 0 12vw;
   }
 
   .post-full-header {
@@ -526,18 +537,17 @@ figure {
 @media (max-width: 1000px) {
   .nav-content {
     background-color: white;
-    display: block;
+    display: none;
     position: absolute;
     right: 8vw;
     top: 48px;
-    opacity: 0;
     transform: translateX(280px);
-    transition: opacity 250ms, transform 250ms;
+    transition: transform 250ms;
     z-index: 10;
   }
 
   .nav-content.active {
-    opacity: 1;
+    display: block;
     transform: translateX(0);
   }
 
@@ -552,6 +562,7 @@ figure {
 
   .nav-menu-icon {
     display: none;
+    font-size: 28px;
     cursor: pointer;
   }
 
