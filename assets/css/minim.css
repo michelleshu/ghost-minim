@@ -582,12 +582,17 @@ figcaption {
 }
 
 @media (max-width: 400px) {
+  .site-main {
+    margin: 0 8vw;
+  }
+  
   .featured-post-content {
     bottom: 24px;
   }
 
   .featured-post-content .post-card-title {
-    font-size: 36px;
+    font-size: 32px;
+    margin: 14px auto;
     width: 85%;
   }
 
@@ -596,6 +601,8 @@ figcaption {
   }
 
   .featured-post-content .post-card-excerpt {
+    font-size: 14px;
+    margin: 14px auto;
     width: 85%;
   }
 
